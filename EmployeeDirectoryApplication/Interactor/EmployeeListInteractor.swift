@@ -14,14 +14,14 @@ protocol EmployeeListPresentable {
 
 class EmployeeListInteractor {
     
-    init(employeesInfoService: EmployeesInfoServicing,
+    init(employeesInfoProvider: EmployeesInfoProviding,
          employeeListPresenter: EmployeeListPresentable) {
-        self.employeesInfoService = employeesInfoService
+        self.employeesInfoProvider = employeesInfoProvider
         self.employeeListPresenter = employeeListPresenter
     }
     
     func activate() {
-        employeesInfoService.getEmployeesInfo { (response: EmployeesResponse?, error: Error?) in
+        employeesInfoProvider.getEmployeesInfo { (response: EmployeesResponse?, error: Error?) in
             if let error = error {
                 self.employeeListPresenter.showFullScreenView(error.localizedDescription)
                 return
@@ -42,6 +42,6 @@ class EmployeeListInteractor {
     
     // MARK: - Private
     
-    private let employeesInfoService: EmployeesInfoServicing
+    private let employeesInfoProvider: EmployeesInfoProviding
     private let employeeListPresenter: EmployeeListPresentable
 }

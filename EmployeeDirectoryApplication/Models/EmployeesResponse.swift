@@ -9,4 +9,6 @@ import Foundation
 
 struct EmployeesResponse: Codable {
     let employees: [Employee]
+    
+    static let storeKey = "persistentStore.EmployeesResponse"
 }

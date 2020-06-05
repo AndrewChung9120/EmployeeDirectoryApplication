@@ -22,7 +22,7 @@ enum GetEmployeesInfoError: LocalizedError {
 }
 
 protocol EmployeesInfoServicing {
-    func getEmployeesInfo(completion: @escaping (EmployeesResponse?, Error?) -> Void)
+    func getEmployeesInfo(completion: @escaping (Data?, Error?) -> Void)
 }
 
 class EmployeesInfoService: EmployeesInfoServicing {
@@ -37,25 +37,19 @@ class EmployeesInfoService: EmployeesInfoServicing {
         return urlComponents
     }()
     
-    func getEmployeesInfo(completion: @escaping (EmployeesResponse?, Error?) -> Void) {
-        guard let url = urlComponents.url else {
+    func getEmployeesInfo(completion: @escaping (Data?, Error?) -> Void) {
+        
+        guard let url = self.urlComponents.url else {
             return
         }
         
         let urlRequest = URLRequest(url: url)
-        let task = URLSession.shared.dataTask(with: urlRequest) { (data: Data?, response: URLResponse?, error: Error?) in
+        let task = URLSession(configuration: .ephemeral).dataTask(with: urlRequest) { (data: Data?, response: URLResponse?, error: Error?) in
             guard let data = data else {
                 completion(nil, error)
                 return
             }
-            
-            do {
-                let decoder = JSONDecoder()
-                let response = try decoder.decode(EmployeesResponse.self, from: data)
-                completion(response, nil)
-            } catch let error {
-                completion(nil, error)
-            }
+            completion(data, nil)
         }
         task.resume()
     }

@@ -18,7 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let viewController = EmployeeListViewController()
-        let interactor = EmployeeListInteractor(employeesInfoService: EmployeesInfoService(),
+        let persistentStore = PersistentStore()
+        let employeesInfoService = EmployeesInfoService()
+        let employeesInfoProvider = EmployeesInfoProvider(persistentStore: persistentStore,
+                                                          employeesInfoService: employeesInfoService)
+        let interactor = EmployeeListInteractor(employeesInfoProvider: employeesInfoProvider,
                                                 employeeListPresenter: viewController)
         interactor.activate()
         

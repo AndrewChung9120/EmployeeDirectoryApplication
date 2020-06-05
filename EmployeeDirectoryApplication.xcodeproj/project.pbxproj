@@ -21,6 +21,8 @@
 		BE4F8F1824693A08008619D5 /* EmployeeListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F8F1724693A08008619D5 /* EmployeeListInteractor.swift */; };
 		BE4F8F1A2469F44A008619D5 /* EmployeeListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F8F192469F44A008619D5 /* EmployeeListInteractorTests.swift */; };
 		BE4F8F1C2469FAEC008619D5 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F8F1B2469FAEC008619D5 /* Mocks.swift */; };
+		BEA371C8248AB40D00627C80 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA371C7248AB40D00627C80 /* PersistentStore.swift */; };
+		BEA371CA248AB70C00627C80 /* EmployeesInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA371C9248AB70C00627C80 /* EmployeesInfoProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		BE4F8F1724693A08008619D5 /* EmployeeListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListInteractor.swift; sourceTree = "<group>"; };
 		BE4F8F192469F44A008619D5 /* EmployeeListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListInteractorTests.swift; sourceTree = "<group>"; };
 		BE4F8F1B2469FAEC008619D5 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		BEA371C7248AB40D00627C80 /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
+		BEA371C9248AB70C00627C80 /* EmployeesInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesInfoProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				BE4F8EEE2468F44B008619D5 /* Assets.xcassets */,
 				BE4F8EF02468F44B008619D5 /* LaunchScreen.storyboard */,
 				BE4F8EF32468F44B008619D5 /* Info.plist */,
+				BEA371C7248AB40D00627C80 /* PersistentStore.swift */,
+				BEA371C9248AB70C00627C80 /* EmployeesInfoProvider.swift */,
 			);
 			path = EmployeeDirectoryApplication;
 			sourceTree = "<group>";
@@ -261,8 +267,10 @@
 				BE4F8F0F2469134C008619D5 /* Employee.swift in Sources */,
 				BE4F8F1824693A08008619D5 /* EmployeeListInteractor.swift in Sources */,
 				BE4F8F0B2468FD77008619D5 /* EmployeesResponse.swift in Sources */,
+				BEA371CA248AB70C00627C80 /* EmployeesInfoProvider.swift in Sources */,
 				BE4F8EE62468F448008619D5 /* AppDelegate.swift in Sources */,
 				BE4F8F1124691687008619D5 /* FullScreenView.swift in Sources */,
+				BEA371C8248AB40D00627C80 /* PersistentStore.swift in Sources */,
 				BE4F8F13246924CB008619D5 /* EmployeeListCell.swift in Sources */,
 				BE4F8F0D2468FF6D008619D5 /* EmployeesInfoService.swift in Sources */,
 				BE4F8EE82468F448008619D5 /* SceneDelegate.swift in Sources */,

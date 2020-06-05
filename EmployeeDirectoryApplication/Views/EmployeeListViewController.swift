@@ -75,6 +75,24 @@ class EmployeeListViewController: UITableViewController, EmployeeListPresentable
         return 60.0
     }
     
+    // MARK: - UITableViewDelegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.row < employees.count else {
+            return
+        }
+        
+        let employee = employees[indexPath.row]
+        let detailsVC = EmployeeDetailsViewController()
+        detailsVC.set(fullName: employee.full_name,
+                      phoneNumber: employee.phone_number ?? "phone_number",
+                      emailAddress: employee.email_address,
+                      biography: employee.biography ?? "biography",
+                      photoURL: employee.photo_url_large ?? "",
+                      team: employee.team)
+        navigationController?.pushViewController(detailsVC, animated: true)
+    }
+    
     // MARK: - Private
     
     private func setupUI() {

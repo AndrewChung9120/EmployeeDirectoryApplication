@@ -23,6 +23,7 @@
 		BE4F8F1C2469FAEC008619D5 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F8F1B2469FAEC008619D5 /* Mocks.swift */; };
 		BEA371C8248AB40D00627C80 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA371C7248AB40D00627C80 /* PersistentStore.swift */; };
 		BEA371CA248AB70C00627C80 /* EmployeesInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA371C9248AB70C00627C80 /* EmployeesInfoProvider.swift */; };
+		BEA371CC248AC16700627C80 /* EmployeeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA371CB248AC16700627C80 /* EmployeeDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		BE4F8F1B2469FAEC008619D5 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		BEA371C7248AB40D00627C80 /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
 		BEA371C9248AB70C00627C80 /* EmployeesInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesInfoProvider.swift; sourceTree = "<group>"; };
+		BEA371CB248AC16700627C80 /* EmployeeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				BE4F8EE92468F448008619D5 /* EmployeeListViewController.swift */,
 				BE4F8F1024691687008619D5 /* FullScreenView.swift */,
 				BE4F8F12246924CB008619D5 /* EmployeeListCell.swift */,
+				BEA371CB248AC16700627C80 /* EmployeeDetailsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				BE4F8EEA2468F448008619D5 /* EmployeeListViewController.swift in Sources */,
 				BE4F8F0F2469134C008619D5 /* Employee.swift in Sources */,
 				BE4F8F1824693A08008619D5 /* EmployeeListInteractor.swift in Sources */,
+				BEA371CC248AC16700627C80 /* EmployeeDetailsViewController.swift in Sources */,
 				BE4F8F0B2468FD77008619D5 /* EmployeesResponse.swift in Sources */,
 				BEA371CA248AB70C00627C80 /* EmployeesInfoProvider.swift in Sources */,
 				BE4F8EE62468F448008619D5 /* AppDelegate.swift in Sources */,

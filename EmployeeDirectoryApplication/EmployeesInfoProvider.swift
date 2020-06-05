@@ -16,7 +16,7 @@ class EmployeesInfoProvider: EmployeesInfoProviding {
     
     func getEmployeesInfo(completion: @escaping (EmployeesResponse?, Error?) -> Void) {
         
-        let (data, error) = persistentStore.getData(key: EmployeesResponse.storeKey)
+        let (data, _) = persistentStore.getData(key: EmployeesResponse.storeKey)
 //        print(error)
         if let data = data {
             do {
@@ -34,7 +34,7 @@ class EmployeesInfoProvider: EmployeesInfoProviding {
                 return
             }
             
-            let error = self.persistentStore.write(key: EmployeesResponse.storeKey, data: data)
+            let _ = self.persistentStore.write(key: EmployeesResponse.storeKey, data: data)
 //            print(error)
             print("Write data to persistentStore")
             do {

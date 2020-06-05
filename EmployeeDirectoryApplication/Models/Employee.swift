@@ -24,3 +24,5 @@ struct Employee: Codable {
     let team: String
     let employee_type: EmployeeType
 }
+
+// full_name, phone_number, email_address, biography, photo_url_large, team
